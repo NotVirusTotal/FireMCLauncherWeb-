@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FireMC Launcher</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #282c34;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      flex-direction: column;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 400px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .download-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+
+    .download-btn:hover {
+      background-color: #45a049;
+    }
+
+    .download-btn:active {
+      background-color: #388e3c;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .download-btn {
+      animation: bounce 1s infinite;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>FireMC Launcher</h1>
+    <p>Welcome! Click the button below to start downloading the installer.</p>
+    <button class="download-btn" id="downloadBtn">Download Installer</button>
+    <div class="footer">
+      <p>&copy; 2024 FireMC - All Rights Reserved</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('downloadBtn').addEventListener('click', function() {
+      const downloadUrl = "https://www.mediafire.com/file/za75d0dofssutbd/FireMCLauncherInstaller.exe/file";  // Change this URL to the correct one
+      window.location.href = downloadUrl;
+    });
+  </script>
+
+</body>
+</html>
